@@ -10,6 +10,7 @@ module ActsEnumTranslable
       @status_list = User.enum_list(@enum.to_sym)
       @enum_status_english = [['Inactive', 0], ['Active', 1], ['Blocked', 2]]
       @enum_status_portuguese = [['Inativo', 0], ['Ativo', 1], ['Bloqueado', 2]]
+      @enum_status_fom_portuguese = [[0, 'Inativo'], [1, 'Ativo'], [2, 'Bloqueado']]
     end
 
     test 'a user enum should be status' do
@@ -38,6 +39,11 @@ module ActsEnumTranslable
     test 'enums values and keys together status in portuguese' do
       I18n.locale = :pt
       assert_equal @enum_status_portuguese, User.enum_with_keys(:status)
+    end
+
+    test 'enums list for form type status in english' do
+      I18n.locale = :pt
+      assert_equal @enum_status_fom_portuguese, User.enum_form(:status)
     end
   end
 end

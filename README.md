@@ -87,7 +87,7 @@ pt:
           show: 'Visível'
 ```
 
-## Use methods sufix _translable enums key
+## Use methods sufix with _translable for enums key
 ```ruby
 # print status
 user = User.new(status: :blocked, visible: :show)
@@ -99,6 +99,51 @@ user.status_translable
 user.visible_translable
 # english: Show
 # portuguese: Visível
+```
+
+## Use methods in Model class get enums for key
+
+_Required key param._
+
+```ruby
+# return Array with Values
+# in english
+# I18n.locale = :en
+User.enum_list(:status)
+# => ["Inactive", "Active", "Blocked"]
+
+# in portuguese
+# I18n.locale = :pt
+User.enum_list(:status)
+# => ["Inativo", "Ativo", "Bloqueado"]
+```
+
+Now return array with values and keys or reverse
+
+```ruby
+# return Arrary with par [value, key]
+# in english
+# I18n.locale = :en
+User.enum_with_keys(:status)
+# => [["Inactive", 0], ["Active", 1], ["Blocked", 2]]
+
+# in portuguese
+# I18n.locale = :pt
+User.enum_with_keys(:status)
+# => [["Inativo", 0], ["Ativo", 1], ["Bloqueado", 2]]
+
+# return par array [key, value]
+User.enum_form(:status)
+# => [[0, "Inativo"], [1, "Ativo"], [2, "Bloqueado"]]
+```
+
+### Use SimpleForm too
+
+Easy return enums translated.
+
+```ruby
+# with I18n.locale = :pt or :en
+<%= f.select :status, User.enum_form(:status), include_blank: true %>
 ```
 
 ## Contributing

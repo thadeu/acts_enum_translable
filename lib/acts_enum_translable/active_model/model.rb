@@ -45,6 +45,27 @@ module ActsEnumTranslable
             end
           end
         end
+
+        # Use with radio simple_form
+        #
+        # @return [Array] [["Nao Realizado", 0], ["Realizado", 1], ["Arquivado", 2]]
+        def self.enum_form(enum_key = nil)
+          # runtime_error exception
+          runtime_error enum_key
+
+          defined_enums[enum_key.to_s].map do |enum|
+            original_key = enum.first.humanize
+            trans_key = i18n_key(enum_key, enum.first)
+
+            # procura nos arquivo de traducao
+            # caso nao encontre humanize o proprio enum
+            if I18n.exists? trans_key
+              [enum.second, I18n.t(trans_key, locale: I18n.locale)]
+            else
+              [enum.second, original_key]
+            end
+          end
+        end
       end
     end
   end
