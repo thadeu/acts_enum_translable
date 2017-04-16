@@ -1,0 +1,19 @@
+Style/Encoding:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 99
+
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+    - lib/**/*.rake
+  Exclude:
+    - test/rails/**/*
+    - test/test_helper.rb
+    - bin/test
+    - ./*.gemspec
+    - Gemfile
+Documentation:
+  Enabled: false

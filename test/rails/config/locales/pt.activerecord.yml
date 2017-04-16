@@ -1,0 +1,20 @@
+pt:
+  activerecord:
+    attributes:
+      users:
+        status:
+          inactive: "Inativo"
+          active: "Ativo"
+          blocked: "Bloqueado"
+        visible:
+          hide: 'Oculto'
+          show: 'Visível'
+      user_profiles:
+        status:
+          pending: 'Pendente'
+          completed: 'Completo'
+          blocked: 'Bloqueado'
+        role:
+          user: 'Usuário'
+          admin: 'Administrador'
+          superadmin: 'Super Administrador'

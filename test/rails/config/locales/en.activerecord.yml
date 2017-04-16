@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    attributes:
+      users:
+        status:
+          inactive: "Inactive"
+          Active: "Active"
+          blocked: "Blocked"
+        visible:
+          hide: 'Hide'
+          show: 'Show'
+      user_profiles:
+        status:
+          pending: 'Pendente'
+          completed: 'Completo'
+          blocked: 'Bloqueado'

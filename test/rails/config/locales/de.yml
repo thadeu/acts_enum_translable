@@ -1,0 +1,7 @@
+de:
+  activerecord:
+    attributes:
+      users:
+        visible:
+          hide: 'verstecken'
+          show: 'sichtbar'
