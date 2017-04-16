@@ -51,6 +51,8 @@ end
 
 ## Configure active_record attributes in file .yml
 
+More details, please visit section [4.5 Translations for Active Record Models](http://guides.rubyonrails.org/i18n.html#translations-for-active-record-models)
+
 Configure *Locale English* for exemple
 
 ```ruby
