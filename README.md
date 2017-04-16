@@ -90,7 +90,7 @@ pt:
 ## Use methods sufix _translable enums key
 ```ruby
 # print status
-user = User.new(status: 2, visible: 1)
+user = User.new(status: :blocked, visible: :show)
 user.status_translable
 # english: Blocked
 # portuguese: Bloqueado
