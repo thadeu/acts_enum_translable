@@ -24,7 +24,7 @@ $ bundle install
 More details, please visit [ActiveRecord::Enum](http://api.rubyonrails.org/classes/ActiveRecord/Enum.html)
 
 ```ruby
-# exemple model
+# example model
 # user.rb
 
 class User < ApplicationRecord
