@@ -9,3 +9,4 @@ test/rails/tmp/
 .DS_Store
 .yardoc/
 Gemfile.lock
+*.gem
