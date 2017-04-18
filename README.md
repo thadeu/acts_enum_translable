@@ -1,6 +1,9 @@
 # ActsEnumTranslable
 ActsEnumTranslable convention translate enums with .yml file.
 
+## Pull Request Ruby on Rails
+I hope this functionality is accepted in the pull request I made in the rails project. If it is accepted, we will soon have a merge for rails 5.x. (Pull Request in to Rails 5.x)[https://github.com/rails/rails/pull/28787]
+
 ## Usage
 * Install Gem
 * Configure enum native Rails
